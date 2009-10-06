@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Flujconf
+GenericName=Configurator
+Comment=Configurator for darkice
+Type=Application
+Exec=flujconf
+Icon=darklord
+Terminal=true
+Categories=Sound;

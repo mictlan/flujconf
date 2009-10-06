@@ -1,0 +1,33 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# Sample debian/rules that uses debhelper.
+# This file was originally written by Joey Hess and Craig Small.
+# As a special exception, when this file is copied by dh-make into a
+# dh-make output file, you may use that output file without restriction.
+# This special exception was added by Craig Small in version 0.37 of dh-make.
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+DEB_PYTHON_SYSTEM = pycentral
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/python-distutils.mk
+
+install/flujconf::
+	dh_pycentral -pflujconf
+	ln -fs /usr/share/pyshared/flujconf/flujconf.py debian/flujconf/usr/bin/flujconf
+	chmod +x debian/flujconf/usr/share/pyshared/flujconf/flujconf.py
+
+
+binary-install/flujconf::
+	dh_pycentral -pflujconf
+
+
+clean::
+	rm -rf build build-stamp configure-stamp build/ MANIFEST
+	dh_clean
+

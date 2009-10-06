@@ -1,0 +1,12 @@
+flujconf (0.4-2) unstable; urgency=low
+
+  * Ahora instala el script en /usr/bin
+
+ -- Kevin Brown <kev@flujos.org>  Tue, 06 Oct 2009 03:04:21 +0000
+
+flujconf (0.4-1) unstable; urgency=low
+
+  * Initial release 
+
+ -- Kevin Brown <kev@flujos.org>  Mon, 05 Oct 2009 18:29:32 +0000
+

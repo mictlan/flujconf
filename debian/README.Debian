@@ -1,0 +1,19 @@
+flujconf for Debian
+-------------------
+
+this program reduces the configuration of darkice to the bare minimum with some simple text menus. 
+if run without option, it loads some sensible defaults. given the -c option, it loads its configuration from that file. it expects a regular darkice.cfg. see man darkice.cfg.  
+
+-v: Version Information
+-help: Help
+-ayuda: Ayuda
+-c: Specify config file
+
+
+Esta Programa Incuye los siguintes opciones:
+  -v:       Imprime el numero de version
+  -help:    Ver esta ayuda
+  -ayuda:   Ver esta ayuda
+  -c:       Especificar la ruta a un configuracion de darkice
+ 
+ -- Kevin Brown <kev@flujos.org>  Mon, 05 Oct 2009 18:29:32 +0000

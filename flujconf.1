@@ -1,0 +1,148 @@
+.\"     Title: FLUJCONF
+.\"    Author: Kevin Brown <kev@flujos.org>
+.\" Generator: DocBook XSL Stylesheets v1.73.2 <http://docbook.sf.net/>
+.\"      Date: 10/05/2009
+.\"    Manual: flujconf User Manual
+.\"    Source: flujconf
+.\"
+.TH "FLUJCONF" "1" "10/05/2009" "flujconf" "flujconf User Manual"
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.SH "NAME"
+flujconf \- configurator for darkice
+.SH "SYNOPSIS"
+.HP 9
+\fBflujconf\fR \fB\-c\ \fR\fB\fI~/\&.darkice\&.cfg\fR\fR [\fB\-\-example=\fR\fBthat\fR] [{\fB\-e\fR\ |\ \fB\-\-example\fR}\ \fIthis\fR] [{\fB\-e\fR\ |\ \fB\-\-example\fR}\ {\fIthis\fR\ |\ \fIthat\fR}]
+.HP 9
+\fBflujconf\fR [{\fB\-help\fR} | {\fB\-v\fR}]
+.SH "CONFIGURATOR FOR DARKICE"
+.PP
+This manual page documents briefly the
+\fBflujconf\fR
+and
+\fBbar\fR
+commands\&.
+.PP
+This manual page was written for the Debian distribution because the original program does not have a manual page\&. Instead, it has documentation in the GNU
+\fBinfo\fR(1)
+format; see below\&.
+.PP
+\fBflujconf\fR
+is a program that\&.\&.\&.
+.SH "OPTIONS"
+.PP
+The program follows the usual GNU command line syntax, with long options starting with two dashes (`\-\')\&. A summary of options is included below\&. For a complete description, see the
+\fBinfo\fR(1)
+files\&.
+.PP
+\fB\-e \fR\fB\fIthis\fR\fR, \fB\-\-example=\fR\fB\fIthat\fR\fR
+.RS 4
+Does this and that\&.
+.RE
+.PP
+\fB\-h\fR, \fB\-\-help\fR
+.RS 4
+Show summary of options\&.
+.RE
+.PP
+\fB\-v\fR, \fB\-\-version\fR
+.RS 4
+Show version of program\&.
+.RE
+.SH "FILES"
+.PP
+\fI/etc/foo\&.conf\fR
+.RS 4
+The system\-wide configuration file to control the behaviour of
+flujconf\&. See
+\fBfoo.conf\fR(5)
+for further details\&.
+.RE
+.PP
+\fI${HOME}/\&.foo\&.conf\fR
+.RS 4
+The per\-user configuration file to control the behaviour of
+flujconf\&. See
+\fBfoo.conf\fR(5)
+for further details\&.
+.RE
+.SH "ENVIONMENT"
+.PP
+\fBFOO_CONF\fR
+.RS 4
+If used, the defined file is used as configuration file (see also
+the section called \(lqFILES\(rq)\&.
+.RE
+.SH "DIAGNOSTICS"
+.PP
+The following diagnostics may be issued on
+\fIstderr\fR:
+.PP
+Bad configuration file\&. Exiting\&.
+.RS 4
+The configuration file seems to contain a broken configuration line\&. Use the
+\fB\-\-verbose\fR
+option, to get more info\&.
+.RE
+.PP
+\fBflujconf\fR
+provides some return codes, that can be used in scripts:
+.\" line length increase to cope w/ tbl weirdness
+.ll +(\n(LLu * 62u / 100u)
+.TS
+ll.
+\fICode\fR	\fIDiagnostic\fR
+T{
+\fB0\fR
+T}	T{
+Program exited successfully\&.
+T}
+T{
+\fB1\fR
+T}	T{
+The configuration file seems to be broken\&.
+T}
+.TE
+.\" line length decrease back to previous value
+.ll -(\n(LLu * 62u / 100u)
+.sp
+.SH "BUGS"
+.PP
+The program is currently limited to only work with the
+foobar
+library\&.
+.PP
+The upstreams
+BTS
+can be found at
+\fI\%http://bugzilla.foo.tld\fR\&.
+.SH "SEE ALSO"
+.PP
+\fBbar\fR(1),
+\fBbaz\fR(1),
+\fBfoo.conf\fR(5)
+.PP
+The programs are documented fully by
+The Rise and Fall of a Fooish Bar
+available via the
+\fBinfo\fR(1)
+system\&.
+.SH "AUTHOR"
+.PP
+\fBKevin Brown\fR <\&kev@flujos\&.org\&>
+.sp -1n
+.IP "" 4
+Wrote this manpage for the Debian system\&.
+.SH "COPYRIGHT"
+Copyright \(co 2007 Kevin Brown
+.br
+.PP
+This manual page was written for the Debian system (but may be used by others)\&.
+.PP
+Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or (at your option) any later version published by the Free Software Foundation\&.
+.PP
+On Debian systems, the complete text of the GNU General Public License can be found in
+\fI/usr/share/common\-licenses/GPL\fR\&.
+.sp

@@ -52,16 +52,17 @@ numero."""
         footer =  """
 P) Regresar todos los campos a valores (P)redeterminados
 O) Otras (O)pciones 
-S) (S)alir"
+S) (S)alir
 intro|enter) Iniciar transmission
 ______________________"""
         bmenu = menu(options, 'configuration', msg, footer)
         opt = bmenu.display()
-        if opt == 'S':
+	lopt = opt.lower()
+        if lopt == 's':
             bmenu.bye_bye()
-        elif opt == 'O':
+        elif lopt == 'o':
             self.options_menu()
-        elif opt == 'P':
+        elif lopt == 'o':
             self.config = self.defaults
             self.start()
         elif opt == '':
@@ -125,14 +126,20 @@ intro|enter) Volver a Menu Anterior
             amenu.bye_bye()
  
     def catch_options(self, options, opt):
-        opt = int(opt)-1
-        if type(options[opt]) == type(()):
-            key = options[opt][0]
-            msg = 'entra nuevo valor de %s: ' % key 
-            self.config['icecast2-0'][key] = raw_input(msg) 
-        elif type(options[opt]) == type('s'):
-            msg = 'entra nuevo valor de %s: ' % options[opt] 
-            self.config['icecast2-0'][options[opt]] = raw_input(msg)
+	try:
+            opt = int(opt)-1
+            if type(options[opt]) == type(()):
+                key = options[opt][0]
+                msg = 'entra nuevo valor de %s: ' % key 
+                self.config['icecast2-0'][key] = raw_input(msg) 
+            elif type(options[opt]) == type('s'):
+                msg = 'entra nuevo valor de %s: ' % options[opt] 
+                self.config['icecast2-0'][options[opt]] = raw_input(msg)
+	except ValueError:
+		os.system("clear")
+		print "*%s* no es un opcion. intenta de nuevo" % opt
+		sleep(3)
+		self.start()
             
 
     def is_not_running(self, app):

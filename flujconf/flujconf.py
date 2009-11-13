@@ -19,7 +19,7 @@ import sys, os
 from time import sleep
 import string
 
-version = '0.4'
+version = '0.5'
 
 
 def main():
@@ -50,7 +50,9 @@ Esta Programa Incuye los siguintes opciones:
 #            elif option == 'd':
 #                music_dir = string.strip(arg[2:])    
             else:
-                print 'Unknown option.'
+                print """Unknown option. -help or for help
+                            -ayuda para ayuda"""
+                        
             sys.exit()
     from lib.shout import shout
     shout = shout()

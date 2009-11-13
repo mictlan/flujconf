@@ -19,7 +19,7 @@ import sys, os
 from time import sleep
 import string
 
-version = '0.4'
+version = '0.5'
 
 
 def main():

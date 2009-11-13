@@ -1,3 +1,19 @@
+flujconf (0.5) unstable; urgency=low
+
+  * making help message more verbose
+  * including corrected texts by radio.flujos.org
+  * quité mucho basura en la pagina del  manual
+  * now flujconf does not die when you give it an unknown option
+
+ -- kev <kev@zeppo.dome.net>  Fri, 13 Nov 2009 12:24:07 -0600
+
+flujconf (0.4-3) unstable; urgency=low
+
+  *  correcting category info in flujconf.desktop
+
+ -- kev <kev@zeppo.dome.net>  Fri, 13 Nov 2009 12:34:44 -0600
+
+
 flujconf (0.4-2) unstable; urgency=low
 
   * Ahora instala el script en /usr/bin
@@ -9,4 +25,3 @@ flujconf (0.4-1) unstable; urgency=low
   * Initial release 
 
  -- Kevin Brown <kev@flujos.org>  Mon, 05 Oct 2009 18:29:32 +0000
-

@@ -39,10 +39,10 @@ class shout(object):
         """how does shout start up. first configuration (if not supplied). tests and checks. then finally starts"""
         #os.system('clear')
         msg = """
-esos son los elementos basicos para trasmitir.
-si estas contento con el configuracion puedes empezar 
-a transmitir teclando <intro>. sino pues cambiar el opcion eligiendo su 
-numero."""
+Estos son los elementos básicos para transmitir.
+Si estás contentx con esta configuración puedes empezar 
+a transmitir con la tecla <enter>. Si no, puedes editar la configuración tecleando el número o letra que corresponda a la información que quieras cambiar:
+"""
         options = []
         for i in self.basic_opts:
             ice = self.config['icecast2-0']
@@ -50,12 +50,12 @@ numero."""
                 options.append((i, ice[i]))
         from interface import menu
         footer =  """
-P) Regresar todos los campos a valores (P)redeterminados
+P) Para regresar todos los campos a los valores (P)redeterminados 
 O) Otras (O)pciones 
 S) (S)alir
 intro|enter) Iniciar transmission
 ______________________"""
-        bmenu = menu(options, 'configuration', msg, footer)
+        bmenu = menu(options, 'configuración', msg, footer)
         opt = bmenu.display()
 	lopt = opt.lower()
         if lopt == 's':
@@ -73,7 +73,7 @@ ______________________"""
                 os.system('clear')
                 print 'dependencias'
                 for d in self.get_depends():
-                    print 'nuestra configuracion depende de: %s' % d
+                    print 'nuestra configuración depende de: %s' % d
                     print 'vamos asegurar que estan corriendo %s' % d
                     if self.is_not_running(d):
                         print """

@@ -2,7 +2,7 @@ Source: flujconf
 Section: sound 
 Priority: extra
 Maintainer: kev <kev@riseup.net>
-Build-Depends: debhelper (>= 7), debhelper (>= 5.0.38), python-central (>= 0.6.0), cdbs(>= 0.4.49)
+Build-Depends: debhelper (>= 7), debhelper (>= 5.0.38), python-central (>= 0.6.0), cdbs(>= 0.4.49), python-setuptools
 XS-Python-Version: >=2.4
 Standards-Version: 3.8.3
 Homepage: http://radio.flujos.org 

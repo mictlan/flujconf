@@ -86,7 +86,6 @@ en el caso de alguna falla intenta reiniciarlo manualmente""" % d
                         elif d == 'icecast2':
                             os.system('sudo /etc/init.d/icecast2 restart')
                             sleep(2)
-                        self.start()
                     else: 
                         print "%s esta corriendo, avanzando" % d
                 self.start_app('darkice')

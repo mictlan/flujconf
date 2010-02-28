@@ -9,6 +9,6 @@ author_email='kev@ki-ai.org',
 license='GPL v2 or later',
 data_files=[('share/man/man1',['flujconf.1']), ('/usr/share/applications',['flujconf.desktop'])],
 #packages=['flujconf'],
-py_modules = ['flujconf.shout', 'flujconf.data','flujconf.file', 'flujconf.app', 'flujconf.interface'],
-scripts=['bin/flujconf'],
+py_modules = ['lib.shout', 'lib.data','lib.file', 'lib.app', 'lib.interface'],
+scripts=['flujconf'],
 )

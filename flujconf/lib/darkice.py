@@ -1,1 +1,0 @@
-#darkice specific functions
